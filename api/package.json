@@ -5,17 +5,19 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
     "handlebars": "^4.7.7",
     "nodemailer": "^6.6.2",
     "reflect-metadata": "^0.1.13",
     "sqlite3": "^5.0.2",
     "typeorm": "^0.2.34",
-    "uuid": "^8.3.2"
+    "uuid": "^8.3.2",
+    "yup": "^0.32.9"
   },
   "scripts": {
     "typeorm": "ts-node-dev node_modules/typeorm/cli.js",
     "dev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
-    "test": "set NODE_ENV=test&&jest",
+    "test": "set NODE_ENV=test&&jest -i",
     "posttest": "rm ./src/database/database.test.sqlite"
   },
   "devDependencies": {
